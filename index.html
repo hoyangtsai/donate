@@ -5,7 +5,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>贊助</title>
+  <title>打賞</title>
   <style type="text/css">
       * {margin: auto;padding: 0;border: 0;}
       html {-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%}
@@ -61,7 +61,8 @@
     url = window.location.origin + '/donate';
     $('.title-name').innerHTML = '打賞作者';
   }
-  $('.qrcode-img').src = 'http://qr.liantu.com/api.php?text=' + encodeURIComponent(url);
+  // doc: http://goqr.me/api/doc/create-qr-code/
+  $('.qrcode-img').src = 'https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=0&data=' + encodeURIComponent(url);
 </script>
 </body>
 </html>
